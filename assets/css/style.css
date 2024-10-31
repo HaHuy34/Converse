@@ -1,0 +1,338 @@
+@import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+ul {
+    margin-bottom: 0 !important;
+    padding: 0;
+}
+
+p {
+    margin-bottom: 0 !important;
+}
+
+a {
+    text-decoration: none !important;
+    color: #000;
+}
+
+li {
+    list-style: none;
+}
+
+.container {
+    padding: 0 16px;
+    margin: 0 auto;
+}
+
+.header-top {
+    background-color: #EBEBEB;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 20px 5px 20px !important;
+}
+
+.shipping {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vietnamese-logo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vietnamese-logo p {
+    font-weight: 500;
+}
+
+
+.shipping h5 {
+    font-size: 18px;
+    margin: 0 10px 0 300px !important;
+}
+
+.vietnamese-logo img,
+.checking-order-account img {
+    height: 13px;
+}
+
+.checking-order-account ul {
+    display: flex;
+    gap: 10px;
+}
+
+.checking-order-account li a {
+    color: #000 !important;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    justify-content: space-between;
+}
+
+.checking-order-account li a:hover p {
+    text-decoration: underline !important;
+}
+
+.checking-order-account li p {
+    font-size: 15px;
+    font-weight: 500;
+}
+
+/* -------------------End Header-Top----------------- */
+/* -------------------Start Header-Bottom------------ */
+.header-botttom {
+    position:fixed;
+    z-index: 9999999;
+    top: 38px;
+    right: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 10px 15px 100px;
+    border-bottom: 1px solid #e6e4e4;
+    background-color: #fff;
+}
+
+/* Khi cuộn xuống, đặt header-botttom lên đầu */
+.header-botttom.scrolled {
+    top: 0;
+    border-top: none;
+}
+
+.banner img {
+    margin-top: 62px;
+}
+
+.header-botttom img {
+    height: 16px;
+}
+
+.link-nav ul,
+.account-header-bottom ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.link-nav ul li {
+    position: relative;
+    font-weight: 700;
+    font-size: 18px;
+    color: #000;
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+/* Màu sắc khi hover vào thẻ <li> */
+.link-nav li:hover {
+    color: #007bff;
+}
+
+.link-nav ul li::before {
+    content: "";
+    height: 2px;
+    width: 0%;
+    background-color: #007bff;
+    position: absolute;
+    bottom: 0;
+    transition: all .3s ease-in-out;
+}
+
+
+.link-nav ul li:hover::before {
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: #007bff;
+    position: absolute;
+    bottom: 0;
+}
+
+.account-header-bottom i {
+    font-size: 25px;
+}
+
+.account-header-bottom li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search {
+    padding: 10px;
+    background-color: #000000;
+    color: #fff;
+}
+
+.banner {
+    width: 100%;
+    position: relative;
+}
+
+.banner img {
+    width: 100%;
+}
+
+
+/* Animation buttom*/
+.btn-shop-now {
+    position: absolute;
+    bottom: 20%;
+    right: 35%;
+    transform: translate(-50%, -50%);
+}
+
+.btn-line-fill {
+    cursor: pointer;
+    border: 1px solid #333;
+    overflow: hidden;
+    position: relative;
+    color: #333 !important;
+    transition: all 0.8s ease 0s;
+    z-index: 1;
+    width: fit-content;
+    padding: 12px 28px;
+    font-size: 20px;
+    margin-top: 14px;
+    border: none;
+    background-color: #fff;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 10px;
+    transition: all 0.3s;
+    animation: showcontent 1s ease-in-out 0.6s 1 forwards;
+}
+
+.btn-line-fill:hover {
+    color: #fff !important;
+}
+
+@keyframes criss-cross-left {
+    0% {
+        left: -20px;
+    }
+
+    50% {
+        left: 50%;
+        width: 20px;
+        height: 20px;
+    }
+
+    100% {
+        left: 50%;
+        width: 450px;
+        height: 450px;
+    }
+}
+
+@keyframes criss-cross-right {
+    0% {
+        right: -20px;
+    }
+
+    50% {
+        right: 50%;
+        width: 20px;
+        height: 20px;
+    }
+
+    100% {
+        right: 50%;
+        width: 450px;
+        height: 450px;
+    }
+}
+
+.btn-line-fill:before,
+.btn-line-fill:after {
+    position: absolute;
+    top: 50%;
+    content: "";
+    width: 20px;
+    height: 20px;
+    background-color: #333;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.btn-line-fill:before {
+    left: -20px;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.btn-line-fill:after {
+    right: -20px;
+    -webkit-transform: translate(50%, -50%);
+    transform: translate(50%, -50%);
+}
+
+.btn-line-fill:hover:before {
+    -webkit-animation: criss-cross-left 0.7s both;
+    animation: criss-cross-left 0.7s both;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+.btn-line-fill:hover:after {
+    -webkit-animation: criss-cross-right 0.7s both;
+    animation: criss-cross-right 0.7s both;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+.training-style h1 {
+    font-weight: 400 !important;
+    margin: 30px 0 20px 0;
+}
+
+.shop-alll {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-weight: 700;
+}
+
+.shop-alll i {
+    font-size: 30px;
+}
+
+.mySwiper {
+    margin-top: 30px;
+
+}
+
+.swiper-slide img {
+    width: 100%;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------End Header-Bottom------------ */
+/* -------------------Start Footer------------ */
+/* -------------------End Footer------------ */
