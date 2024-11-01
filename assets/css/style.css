@@ -95,7 +95,7 @@ li {
 /* -------------------End Header-Top----------------- */
 /* -------------------Start Header-Bottom------------ */
 .header-botttom {
-    position:fixed;
+    position: fixed;
     z-index: 9999999;
     top: 38px;
     right: 0;
@@ -115,7 +115,7 @@ li {
 }
 
 .banner img {
-    margin-top: 62px;
+    margin-top: 80px;
 }
 
 .header-botttom img {
@@ -319,20 +319,388 @@ li {
 }
 
 .swiper-slide img {
-    width: 100%;}
+    width: 100%;
+}
+
+.swiper-slide {
+    position: relative;
+    cursor: pointer;
+}
+
+.swiper-slide::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    transition: all .3s ease-in-out;
+}
+
+.swiper-slide:hover::before {
+    background-color: rgb(0, 0, 0, .2);
+}
+
+.lever-up {
+    margin-top: 20px;
+    position: relative;
+}
+
+.lever-up img {
+    width: 100%;
+}
+
+#bst {
+    padding: 20px 50px;
+}
+
+.abs {
+    left: 109% !important;
+    top: -50% !important;
+    padding: 16px 50px;
+}
 
 
+.home-sub {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 60px;
+}
+
+.home-sub-chile {
+    width: 100%;
+    cursor: pointer;
+    text-align: center;
+    overflow: hidden;
+}
+
+.home-sub-chile img {
+    /* width: 100%; */
+    height: 557px;
+    transition: all .3s ease-in-out;
+}
+
+.home-sub-chile:hover img {
+    scale: 1.2;
+}
+
+.img-test-shop {
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.img-test-shop img {
+    width: 50%;
+}
+
+.exx-converse {
+    margin-bottom: 60px;
+}
+
+.from-out {
+    font-weight: 600;
+    font-size: 44px;
+    margin: 70px 0 50px 0;
+}
+
+.home-sus-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.home-sus-main .banner-le {
+    width: 50%;
+}
+
+.banner-le,
+.abs-sub-home,
+.test-home-chi {
+    overflow: hidden;
+}
+
+.banner-le img {
+    width: 100%;
+}
+
+.home-main-test {
+    width: 50%;
+}
+
+.home-main-test img {
+    width: 100%;
+}
+
+.abs-sub-home img {
+    width: 100%;
+}
+
+.test-home-chi {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+}
+
+.test-home-chi img {
+    width: 50%;
+}
+
+.home-sus-main img {
+    position: relative;
+    transition: all .3s ease-in-out;
+}
+
+.home-sus-main img:hover {
+    cursor: pointer;
+    scale: 1.2;
+}
+
+.baner-test-main {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 786px;
+    margin-top: 70px;
+}
+
+.nerver-left-image {
+    height: 100%;
+    cursor: pointer;
+    width: 40%;
+}
+
+.nerver-right-image {
+    width: 60%;
+    height: 100%;
+    cursor: pointer;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    /* 6 cột */
+    grid-auto-rows: minmax(50px, auto);
+    /* Chiều cao tự động */
+    text-align: center;
+}
+
+.item {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #e2e2e2;
+    display: flex;
+    align-items: baseline;
+}
+
+/* Ba cột đầu tiên chỉ chiếm 1 hàng */
+.grid-container>.item:nth-child(-n+3) {
+    grid-row: span 1;
+    border-right: none;
+
+}
+
+/* Ba cột sau, mỗi cột chiếm 2 hàng */
+.grid-container>.item:nth-child(1),
+.grid-container>.item:nth-child(2),
+.grid-container>.item:nth-child(3) {
+    grid-row: span 2;
+    border-right: none;
+}
+
+.item i {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.all-test {
+    font-size: 30px;
+    font-weight: 700;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+}
+
+.item.ahy {
+    display: flex;
+    align-items: center !important;
+    font-weight: 600 !important;
+}
+
+.item.ahy i {
+    font-weight: 500 !important;
+}
+
+.item span:hover,
+.item p:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
 
 
+.free-wory-folow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 10px 0;
+}
 
+.cart-follo-wory {
+    height: 197px;
+    text-align: center;
+    padding: 36px 40px 44px 40px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.05),
+        0px 6px 6px rgba(0, 0, 0, 0.1),
+        0px 8px 8px rgba(0, 0, 0, 0.07),
+        0px 10px 15px rgba(0, 0, 0, 0.03),
+        0px 30px 30px rgba(0, 0, 0, 0.05),
+        0px 70px 60px rgba(0, 0, 0, 0.15);
+    width: calc(100%/3);
+}
 
+.cart-follo-wory i {
+    font-size: 35px;
+}
 
+.cart-follo-wory p {
+    font-size: 20px;
+}
 
+.cart-follo-wory span {
+    color: #A1B6C9;
+    font-size: 14px;
+    font-weight: 500;
+}
 
-
-
+.lear-more {
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 15px !important;
+    font-weight: 600;
+}
 
 
 /* -------------------End Header-Bottom------------ */
+
+
 /* -------------------Start Footer------------ */
+footer {
+    margin-top: 120px;
+}
+
+.footer-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 15px 10px 100px;
+    width: 100%;
+}
+
+.fooer-cart-main {
+    width: calc(100%/4);
+    height: 280px;
+    padding: 20px 0;
+}
+
+#footer-test {
+    padding-left: 60px !important;
+}
+
+#footer-test ul {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+#footer-test li {
+    cursor: pointer;
+    color: #9a9a9b;
+    transition: all .3s ease-in-out;
+    margin-bottom: 14px;
+}
+
+#footer-test li:hover {
+    text-decoration: underline;
+}
+
+.fooer-cart-main h6 {
+    font-size: 20px;
+}
+
+.tesst-cartinp {
+    display: flex;
+    flex-direction: column;
+}
+
+.being-sign {
+    display: flex;
+
+}
+
+.search-email {
+    width: 80%;
+    display: flex;
+    margin: 10px 0;
+}
+
+.search-email input {
+    width: 80%;
+    height: 50px;
+    padding: 0 7px;
+}
+
+.search-email button {
+    height: 50px;
+    width: 50px;
+    transition: all .3s ease-in-out;
+    background-color: #000;
+    border: none;
+}
+
+.search-email button i {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    transition: all .3s ease-in-out;
+}
+
+.i-icon-footer i {
+    margin-top: 22px;
+    font-size: 20px;
+    padding: 15px;
+    border: 1px solid #e2e2e2;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.i-icon-footer i:hover {
+    border: 1px solid #5f5e5e;
+}
+
+.search-email button:hover,
+.search-email button:hover i {
+    background-color: #fff;
+    color: #000;
+}
+
+.search-email button:hover {
+    border: 1px solid #000;
+}
+
+.privacy-policy {
+    text-decoration: underline;
+}
+
+.being-sign a {
+    color: #000;
+    text-decoration: underline !important;
+}
+
 /* -------------------End Footer------------ */
