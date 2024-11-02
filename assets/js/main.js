@@ -81,13 +81,12 @@ const timeReal = document.getElementById("time-real");
 
 // Hàm để lấy thời gian hiện tại và hiển thị trong `#time-real`
 function updateTime() {
-    const now = new Date();
-    const hours = now.getHours().toString().padStart(2, '0');
-    const minutes = now.getMinutes().toString().padStart(2, '0');
-    const timeString = `${hours}:${minutes}`;
+  const now = new Date();
+  const hours = now.getHours().toString().padStart(2, "0");
+  const minutes = now.getMinutes().toString().padStart(2, "0");
+  const timeString = `${hours}:${minutes}`;
 
-    
-    timeReal.textContent = timeString;
+  timeReal.textContent = timeString;
 }
 
 // Gọi hàm lần đầu tiên để hiển thị thời gian ngay lập tức
@@ -95,7 +94,6 @@ updateTime();
 
 // Cập nhật thời gian mỗi phút
 setInterval(updateTime, 60000); // 60000ms = 1 phút
-
 
 // Lấy các phần tử input và danh sách tin nhắn
 const chatInput = document.getElementById("chat-content-cus");
@@ -142,3 +140,14 @@ chatInput.addEventListener("keydown", function (event) {
     }
   }
 });
+
+const search = document.getElementsByClassName("search-main-abs")[0];
+const searchIcon = document.getElementsByClassName("search")[0];
+const cancleSearch = document.getElementById("check-can");
+cancleSearch.addEventListener("click", () => {
+  search.style.display = "none";
+});
+searchIcon.addEventListener("click", () => {
+  search.style.display = "block";
+});
+
